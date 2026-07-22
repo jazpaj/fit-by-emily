@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fit by Emily Coaching Team — Structured in 6 &amp; Transformed in 12</title>
+<meta name="description" content="Coaching built around your lifestyle. Start with Structured in 6 to regain control, then Transformed in 12 to maximise your results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Droid+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1E3C50;
+  --navy-deep:#152b3a;
+  --magenta:#E838A8;
+  --orange:#F08153;
+  --blush:#F1C6BE;
+  --cream:#FDF9F7;
+  --ink:#1E3C50;
+  --muted:#5a6b78;
+  --line:rgba(30,60,80,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Droid Serif",Georgia,serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.display{font-family:"Anton",Impact,sans-serif;font-weight:400;letter-spacing:.5px;line-height:1;text-transform:uppercase}
+.wrap{width:min(1140px,92vw);margin-inline:auto}
+.eyebrow{
+  font-family:"Droid Serif",serif;font-style:italic;font-weight:700;
+  text-transform:uppercase;letter-spacing:2px;font-size:.72rem;
+  color:var(--magenta);margin-bottom:.9rem;display:inline-block
+}
+a{color:inherit}
+.btn{
+  display:inline-block;font-family:"Anton",sans-serif;text-transform:uppercase;
+  letter-spacing:1px;font-size:1rem;text-decoration:none;padding:1rem 2rem;
+  border-radius:2px;transition:transform .15s ease,box-shadow .15s ease;
+  border:2px solid transparent;cursor:pointer
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.btn-magenta{background:var(--magenta);color:#fff;box-shadow:0 10px 24px -12px var(--magenta)}
+.btn-orange{background:var(--orange);color:var(--navy-deep);box-shadow:0 10px 24px -12px var(--orange)}
+.btn-outline{background:transparent;border-color:var(--navy);color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+
+/* ---------- Top bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;background:rgba(30,60,80,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid rgba(241,198,190,.18)
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+.brandmark{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.brandmark img{height:60px;width:auto;display:block}
+.brandmark small{font-family:"Droid Serif",serif;font-style:italic;font-size:.68rem;color:var(--blush);letter-spacing:1px}
+.nav-cta{font-size:.82rem;padding:.6rem 1.2rem}
+@media(max-width:640px){.brandmark small{display:none}.brandmark img{height:48px}}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--navy);color:var(--cream);overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1fr 1.15fr;align-items:stretch;gap:0}
+.hero-copy{padding:5rem 3.5rem 5rem max(4vw,calc((100vw - 1140px)/2));align-self:center}
+.hero .eyebrow{color:var(--blush)}
+.hero h1{font-size:clamp(3rem,6.5vw,5.4rem);color:#fff}
+.hero h1 .amp{color:var(--orange);font-size:.8em}
+.hero h1 .g6{color:var(--magenta)}
+.hero h1 .g12{color:var(--orange)}
+.hero p.lede{
+  font-size:1.15rem;color:#d7e0e6;max-width:34ch;margin:1.6rem 0 2.2rem
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem}
+.hero-photo{position:relative;min-height:560px}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,rgba(30,60,80,.35) 18%,transparent 38%)}
+@media(max-width:860px){
+  .hero .grid{grid-template-columns:1fr}
+  .hero-copy{padding:3.5rem 5vw 2.5rem;text-align:left;order:2}
+  .hero-photo{order:1;min-height:60vh}
+  .hero-photo::after{background:linear-gradient(0deg,var(--navy) 0%,transparent 40%)}
+}
+
+/* ---------- Journey band ---------- */
+.journey{background:var(--navy-deep);color:var(--cream);padding:1.4rem 0}
+.journey .wrap{display:flex;align-items:center;justify-content:center;gap:1.4rem;flex-wrap:wrap;text-align:center}
+.journey .step{font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:1.05rem}
+.journey .s1{color:var(--magenta)}
+.journey .s2{color:var(--orange)}
+.journey .arrow{color:var(--blush);font-family:"Droid Serif",serif;font-size:1.4rem}
+.journey .tag{font-family:"Droid Serif",serif;font-style:italic;font-size:.85rem;color:#9fb2bf;width:100%;margin-top:.2rem}
+
+/* ---------- Section base ---------- */
+.section{padding:5.5rem 0}
+.section h2{font-size:clamp(2rem,4vw,3rem)}
+.section-head{max-width:46ch;margin-bottom:2.8rem}
+.section-head p{color:var(--muted);margin-top:1rem;font-size:1.05rem}
+
+/* ---------- Offers ---------- */
+.offers{background:var(--cream)}
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem}
+.offer{
+  background:#fff;border-radius:6px;padding:2.6rem;position:relative;
+  border:1px solid var(--line);display:flex;flex-direction:column
+}
+.offer.six{border-top:6px solid var(--magenta)}
+.offer.twelve{border-top:6px solid var(--orange)}
+.offer .kicker{font-family:"Droid Serif",serif;font-style:italic;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:.72rem}
+.offer.six .kicker{color:var(--magenta)}
+.offer.twelve .kicker{color:var(--orange)}
+.offer h3{font-size:2.4rem;margin:.5rem 0 .3rem;color:var(--navy)}
+.offer .sub{font-style:italic;color:var(--muted);font-size:1.02rem;margin-bottom:1.4rem}
+.offer .question{
+  background:var(--cream);border-left:3px solid;padding:.9rem 1.1rem;
+  font-style:italic;font-size:1rem;margin:0 0 1.4rem;border-radius:0 4px 4px 0
+}
+.offer.six .question{border-color:var(--magenta)}
+.offer.twelve .question{border-color:var(--orange)}
+.offer .desc{color:var(--ink);margin-bottom:1.6rem;flex-grow:1}
+.offer .price-row{display:flex;align-items:baseline;gap:.6rem;margin-bottom:1.5rem;min-height:2.6rem}
+.offer .price{font-family:"Anton",sans-serif;font-size:2.6rem;color:var(--navy);line-height:1}
+.offer .price small{font-size:.9rem;font-family:"Droid Serif",serif;color:var(--muted);font-style:italic}
+.offer .noprice{font-style:italic;color:var(--muted);font-size:1rem;align-self:center}
+.offer .btn{width:100%;text-align:center}
+.offer .foot{margin-top:1rem;font-size:.85rem;color:var(--muted);text-align:center;font-style:italic}
+@media(max-width:800px){.offer-grid{grid-template-columns:1fr}}
+
+/* ---------- Coach ---------- */
+.coach{background:var(--navy);color:var(--cream)}
+.coach .coach-entry{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center}
+.coach .coach-entry + .coach-entry{margin-top:4.5rem}
+.coach .coach-entry.reverse{grid-template-columns:1.1fr .9fr}
+.coach .coach-entry.reverse .coach-photo{order:2}
+.coach .coach-entry.reverse .coach-text{order:1}
+.coach-photo{border-radius:6px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);aspect-ratio:4/5}
+.coach-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.coach .eyebrow{color:var(--blush)}
+.coach h2{color:#fff}
+.coach h2 .role{display:block;font-size:.44em;color:var(--orange);margin-top:.5rem}
+.coach p{color:#cfdae1;margin-top:1.3rem;font-size:1.05rem}
+.creds{list-style:none;margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:.7rem}
+.creds li{
+  font-family:"Droid Serif",serif;font-size:.82rem;font-style:italic;
+  padding:.4rem 1rem;border:1px solid rgba(241,198,190,.35);border-radius:100px;color:var(--blush)
+}
+@media(max-width:800px){
+  .coach .coach-entry{grid-template-columns:1fr;gap:2rem}
+  .coach .coach-entry.reverse{grid-template-columns:1fr}
+  .coach .coach-entry.reverse .coach-photo{order:1}
+  .coach .coach-entry.reverse .coach-text{order:2}
+  .coach-photo{max-width:340px}
+}
+
+/* ---------- Who this is for ---------- */
+.forwho{background:var(--blush)}
+.forwho h2{color:var(--navy)}
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:2.6rem}
+.who-card{background:var(--cream);border-radius:6px;padding:1.8rem 1.5rem}
+.who-card .n{font-family:"Anton",sans-serif;color:var(--magenta);font-size:1.4rem;display:block;margin-bottom:.6rem}
+.who-card p{margin:0;color:var(--ink)}
+@media(max-width:800px){.who-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.who-grid{grid-template-columns:1fr}}
+
+/* ---------- Included ---------- */
+.included{background:var(--cream)}
+.inc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.6rem}
+.inc-item{
+  display:flex;align-items:flex-start;gap:.9rem;background:#fff;
+  border:1px solid var(--line);border-radius:6px;padding:1.3rem 1.4rem
+}
+.inc-item .dot{flex:0 0 auto;width:12px;height:12px;border-radius:50%;background:var(--magenta);margin-top:.5rem}
+.inc-item:nth-child(even) .dot{background:var(--orange)}
+.inc-item strong{font-family:"Anton",sans-serif;font-weight:400;font-size:1rem;letter-spacing:.5px;color:var(--navy);text-transform:uppercase}
+.inc-item p{margin:.2rem 0 0;font-size:.92rem;color:var(--muted)}
+@media(max-width:800px){.inc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.inc-grid{grid-template-columns:1fr}}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--navy);color:var(--cream)}
+.faq h2{color:#fff}
+.faq .eyebrow{color:var(--blush)}
+.faq-tabs{display:flex;gap:.6rem;margin:1.5rem 0 2rem;flex-wrap:wrap}
+.faq-tab{
+  font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:1px;
+  font-size:.85rem;padding:.65rem 1.3rem;border-radius:100px;cursor:pointer;
+  background:transparent;border:2px solid rgba(255,255,255,.2);color:#cfdae1;transition:.2s
+}
+.faq-tab[aria-selected="true"]{background:var(--magenta);border-color:var(--magenta);color:#fff}
+.faq-tab.t-twelve[aria-selected="true"]{background:var(--orange);border-color:var(--orange);color:var(--navy-deep)}
+.faq-tab.t-choose[aria-selected="true"]{background:var(--blush);border-color:var(--blush);color:var(--navy-deep)}
+.faq-panel{display:none}
+.faq-panel.active{display:block}
+details{border-bottom:1px solid rgba(255,255,255,.12);padding:.3rem 0}
+details summary{
+  list-style:none;cursor:pointer;padding:1.1rem 2rem 1.1rem 0;position:relative;
+  font-family:"Anton",sans-serif;font-weight:400;text-transform:none;letter-spacing:.3px;
+  font-size:1.12rem;color:#fff
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{
+  content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);
+  font-family:"Droid Serif",serif;font-size:1.5rem;color:var(--blush);transition:transform .2s
+}
+details[open] summary::after{content:"\2013"}
+details .answer{padding:0 0 1.3rem;color:#cfdae1;max-width:70ch}
+.choose-cols{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:.5rem}
+.choose-col{background:rgba(255,255,255,.05);border-radius:6px;padding:1.8rem}
+.choose-col h4{font-family:"Anton",sans-serif;font-weight:400;font-size:1.3rem;margin-bottom:1rem}
+.choose-col.six h4{color:var(--magenta)}
+.choose-col.twelve h4{color:var(--orange)}
+.choose-col ul{list-style:none}
+.choose-col li{padding:.5rem 0 .5rem 1.6rem;position:relative;color:#cfdae1;font-size:.98rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.choose-col li:last-child{border-bottom:none}
+.choose-col li::before{content:"";position:absolute;left:0;top:1rem;width:8px;height:8px;border-radius:50%}
+.choose-col.six li::before{background:var(--magenta)}
+.choose-col.twelve li::before{background:var(--orange)}
+@media(max-width:700px){.choose-cols{grid-template-columns:1fr}}
+
+/* ---------- Final CTA ---------- */
+.final{background:var(--cream);text-align:center}
+.final h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--navy);max-width:20ch;margin-inline:auto}
+.final p{color:var(--muted);max-width:48ch;margin:1.2rem auto 2.4rem;font-size:1.1rem}
+.final-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;max-width:760px;margin:0 auto;text-align:left}
+.final-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:2rem}
+.final-card.six{border-top:5px solid var(--magenta)}
+.final-card.twelve{border-top:5px solid var(--orange)}
+.final-card .t{font-family:"Anton",sans-serif;font-size:1.5rem;color:var(--navy);margin-bottom:.3rem}
+.final-card .d{color:var(--muted);font-size:.92rem;font-style:italic;margin-bottom:1.4rem;min-height:3em}
+.final-card .btn{width:100%;text-align:center}
+@media(max-width:640px){.final-cards{grid-template-columns:1fr}}
+
+/* ---------- Footer ---------- */
+footer{background:var(--navy-deep);color:#8ea3b0;padding:3rem 0;text-align:center}
+footer .footer-logo{height:90px;width:auto;margin-bottom:.4rem;opacity:.95}
+footer p{font-size:.85rem;margin-top:.6rem;font-style:italic}
+footer a{color:var(--blush);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brandmark" href="#top" aria-label="Fit by Emily Coaching Team — home">
+      <img src="assets/logo.png" alt="Fit by Emily">
+    </a>
+    <a class="btn btn-magenta nav-cta" href="#offers">View the programmes</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Fit by Emily Coaching Team</span>
+      <h1>Two steps.<br>One <span class="g6">journey</span>.<br>Your <span class="g12">lifestyle</span>.</h1>
+      <p class="lede">Coaching built around the life you actually live — so the results are ones you can keep. Start where you are, and go as far as you want.</p>
+      <div class="hero-actions">
+        <a class="btn btn-magenta" href="#offers">Find your starting point</a>
+        <a class="btn btn-outline" style="border-color:var(--blush);color:var(--blush)" href="#coach">Meet the coaches</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/team.jpeg" alt="The Fit by Emily coaching team — three women, distinct roles, one approach.">
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY BAND -->
+<div class="journey">
+  <div class="wrap">
+    <span class="step s1">Structured in 6</span>
+    <span class="arrow">&rarr;</span>
+    <span class="step s2">Transformed in 12</span>
+    <span class="tag">Regain control first. Maximise results second. Same journey, two stages.</span>
+  </div>
+</div>
+
+<!-- OFFERS -->
+<section class="section offers" id="offers">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Choose your starting point</span>
+      <h2>Where are you in your journey?</h2>
+      <p>These aren't a cheaper option and a pricier one. They're two different stages. The right one depends on what your week looks like right now — not your budget.</p>
+    </div>
+    <div class="offer-grid">
+
+      <div class="offer six reveal">
+        <span class="kicker">The reset · 6 weeks · Led by Mieke</span>
+        <h3>Structured in 6</h3>
+        <p class="sub">We change your lifestyle so your transformation becomes sustainable.</p>
+        <div class="question">"How do we make healthy behaviours become your default?"</div>
+        <p class="desc">The first step in your journey to regaining control — building the habits, routines and mindset that set you up for long-term success. Ideal if you feel stuck, overwhelmed or you keep starting and stopping.</p>
+        <div class="price-row">
+          <span class="price">&euro;299<small> / 6 weeks</small></span>
+        </div>
+        <a class="btn btn-magenta" href="#BUY">Buy Structured in 6</a>
+        <div class="foot">Instant access — start this week.</div>
+      </div>
+
+      <div class="offer twelve reveal">
+        <span class="kicker">The transformation · 12 weeks · Led by Emily</span>
+        <h3>Transformed in 12</h3>
+        <p class="sub">We completely transform your physique — because your lifestyle already supports it.</p>
+        <div class="question">"Now that those behaviours are in place, how do we maximise your results?"</div>
+        <p class="desc">A full transformation of body and mind, built around your lifestyle so your results feel sustainable to maintain. For those ready to commit and fine-tune every variable — training, nutrition, activity and progress.</p>
+        <div class="price-row">
+          <span class="noprice">Every transformation is personal — so let's talk about yours first.</span>
+        </div>
+        <a class="btn btn-orange" href="http://fitbyemily.co/call-booking-page">Book a call with Emily</a>
+        <div class="foot">A short call to map the right plan for you.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COACH -->
+<section class="section coach" id="coach">
+  <div class="wrap">
+    <div class="coach-entry">
+      <div class="coach-photo reveal">
+        <img src="assets/Emily.jpeg" alt="Emily, Lifestyle Coach at Fit by Emily.">
+      </div>
+      <div class="coach-text reveal">
+        <span class="eyebrow">Meet your coach</span>
+        <h2>Emily<span class="role">Transformation Coach</span></h2>
+        <p>Emily coaches the part of the journey most programmes skip: the bit where healthy choices stop feeling like willpower and start feeling normal. Her focus is mindset, routine and behaviour change — helping you break the start-stop cycle and build habits that hold up in a real, busy life.</p>
+        <p>She'll run your weekly check-ins personally, review your progress and adjust as you go — so you never feel like you're doing this alone or guessing what comes next.</p>
+      </div>
+    </div>
+    <div class="coach-entry reverse">
+      <div class="coach-photo reveal">
+        <img src="assets/Mika.jpeg" alt="Mieke Nel, Lifestyle Coach at Fit by Emily.">
+      </div>
+      <div class="coach-text reveal">
+        <span class="eyebrow">Meet your coach</span>
+        <h2>Mieke Nel<span class="role">Lifestyle Coach</span></h2>
+        <p>Mieke brings the same hands-on, personal approach to every client — meeting you where you are and building a plan around your real life, not a generic template.</p>
+        <p>She'll run your weekly check-ins personally, review your progress and adjust as you go — so you never feel like you're doing this alone or guessing what comes next.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="section forwho">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Who this is for</span>
+      <h2>This is for you if…</h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-card reveal"><span class="n">01</span><p>You struggle to stay consistent — you start strong, then life gets in the way.</p></div>
+      <div class="who-card reveal"><span class="n">02</span><p>You've tried diets before, but the weight always finds its way back.</p></div>
+      <div class="who-card reveal"><span class="n">03</span><p>You're new to the gym, or you know you need real accountability.</p></div>
+      <div class="who-card reveal"><span class="n">04</span><p>You want confidence in your body but don't know where to start.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="section included">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Inside Structured in 6</span>
+      <h2>Everything you get</h2>
+      <p>Six weeks of coaching, structure and support — built to fit around your week, not take it over.</p>
+    </div>
+    <div class="inc-grid">
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>6-Week Training Plan</strong><p>Tailored to your experience, goals and equipment.</p></div></div>
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>Nutrition Guidance</strong><p>A sustainable way of eating — not another crash diet.</p></div></div>
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>Weekly Check-Ins</strong><p>1:1 reviews with Mieke, with feedback and adjustments.</p></div></div>
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>Recipe Guide</strong><p>Simple, repeatable meals that make eating well easy.</p></div></div>
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>Habit Tracker</strong><p>Keep the small daily wins visible and stacking up.</p></div></div>
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>WhatsApp Support</strong><p>Direct access when a question comes up mid-week.</p></div></div>
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>Facebook Community</strong><p>Train alongside others on the same journey.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <span class="eyebrow">Answers</span>
+    <h2>Frequently asked questions</h2>
+    <div class="faq-tabs" role="tablist" aria-label="FAQ categories">
+      <button class="faq-tab" role="tab" aria-selected="true" data-panel="p-six">Structured in 6</button>
+      <button class="faq-tab t-twelve" role="tab" aria-selected="false" data-panel="p-twelve">Transformed in 12</button>
+      <button class="faq-tab t-choose" role="tab" aria-selected="false" data-panel="p-choose">Which should I choose?</button>
+    </div>
+
+    <!-- SIX -->
+    <div class="faq-panel active" id="p-six" role="tabpanel">
+      <details><summary>Who is Structured in 6 for?</summary><div class="answer">It's designed for anyone who feels stuck, overwhelmed or inconsistent with their health and fitness. If you've struggled to build lasting habits, this programme helps you regain control and create a routine that actually sticks.</div></details>
+      <details><summary>Is this a weight loss programme?</summary><div class="answer">Weight loss may happen, but the primary goal is to build the habits, routines and mindset that make long-term results possible. Think of it as laying the foundations for lasting success.</div></details>
+      <details><summary>Will I receive a personalised nutrition plan?</summary><div class="answer">Yes. You'll receive personalised nutrition guidance, but the focus is on creating a sustainable way of eating rather than chasing perfection.</div></details>
+      <details><summary>Will I receive a workout programme?</summary><div class="answer">Yes. Your training programme will be tailored to your experience, goals and available equipment.</div></details>
+      <details><summary>How often will I check in?</summary><div class="answer">You'll complete a weekly check-in with Mieke, who will review your progress, provide feedback and make any necessary adjustments.</div></details>
+      <details><summary>Are the live coaching calls mandatory?</summary><div class="answer">No. They're there to provide extra education, accountability and support, but recordings will be available if you can't attend.</div></details>
+      <details><summary>What if I miss a workout or go off track?</summary><div class="answer">That's exactly what this programme is for. We'll help you get back on track without guilt, so one setback doesn't become a bad week or month.</div></details>
+      <details><summary>Can I join if I'm a complete beginner?</summary><div class="answer">Absolutely. The programme is designed to meet you where you are and gradually build confidence and consistency.</div></details>
+      <details><summary>Should I do Structured in 6 before Transformed in 12?</summary><div class="answer">If you're struggling with consistency, routine or sticking to a plan, yes. Structured in 6 is designed to prepare you so you get even better results from Transformed in 12.</div></details>
+    </div>
+
+    <!-- TWELVE -->
+    <div class="faq-panel" id="p-twelve" role="tabpanel">
+      <details><summary>Who is Transformed in 12 for?</summary><div class="answer">This programme is for people who are ready to fully commit to transforming their body. If you've already built some consistency and want to maximise your results, this is for you.</div></details>
+      <details><summary>What's different about this compared to Structured in 6?</summary><div class="answer">Transformed in 12 focuses on optimising every aspect of your progress. Nutrition, training and activity targets are more specific, with the goal of achieving the best body composition results possible.</div></details>
+      <details><summary>Will my plan be personalised?</summary><div class="answer">Yes. Your calories, nutrition, training and progression are tailored specifically to you and adjusted throughout the programme.</div></details>
+      <details><summary>Who will be coaching me?</summary><div class="answer">Emily will personally coach you throughout the programme and review your weekly check-ins.</div></details>
+      <details><summary>Do I have to attend the live coaching calls?</summary><div class="answer">No. They are available as an additional resource, but attendance is optional.</div></details>
+      <details><summary>Can beginners join?</summary><div class="answer">Yes, although if you're struggling to build consistent habits or maintain a routine, Structured in 6 may be the better place to start.</div></details>
+      <details><summary>Will I lose weight?</summary><div class="answer">The goal is body transformation. Depending on your goals, that may mean fat loss, building muscle, improving body composition or increasing strength.</div></details>
+      <details><summary>What happens after the 12 weeks?</summary><div class="answer">Many clients continue their journey into ongoing coaching, while others maintain their results independently using everything they've learned.</div></details>
+    </div>
+
+    <!-- CHOOSE -->
+    <div class="faq-panel" id="p-choose" role="tabpanel">
+      <div class="choose-cols">
+        <div class="choose-col six">
+          <h4>Choose Structured in 6 if you…</h4>
+          <ul>
+            <li>Feel stuck or out of routine.</li>
+            <li>Struggle to stay consistent.</li>
+            <li>Start and stop frequently.</li>
+            <li>Want to build healthy habits without feeling overwhelmed.</li>
+            <li>Need accountability to regain control.</li>
+          </ul>
+        </div>
+        <div class="choose-col twelve">
+          <h4>Choose Transformed in 12 if you…</h4>
+          <ul>
+            <li>Already have a reasonable routine.</li>
+            <li>Can stay consistent most weeks.</li>
+            <li>Want to maximise fat loss or muscle definition.</li>
+            <li>Are ready for more structure and specific targets.</li>
+            <li>Want to achieve your biggest transformation yet.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section final">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--magenta)">Ready when you are</span>
+      <h2>Start where you are today</h2>
+      <p>Whichever stage you're at, the next step is the same: pick the door that fits your life right now.</p>
+    </div>
+    <div class="final-cards">
+      <div class="final-card six reveal">
+        <div class="t">Structured in 6</div>
+        <div class="d">Regain control and build habits that last. €299.</div>
+        <a class="btn btn-magenta" href="#BUY">Buy now</a>
+      </div>
+      <div class="final-card twelve reveal">
+        <div class="t">Transformed in 12</div>
+        <div class="d">Ready to fully commit? Let's map your transformation.</div>
+        <a class="btn btn-orange" href="http://fitbyemily.co/call-booking-page">Book a call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <img class="footer-logo" src="assets/logo.png" alt="Fit by Emily Coaching Team">
+    <p>Coaching built around your lifestyle</p>
+    <p><a href="http://fitbyemily.co/call-booking-page">Book a call</a> &nbsp;·&nbsp; <a href="#offers">View programmes</a></p>
+  </div>
+</footer>
+
+<script>
+// FAQ tabs
+const tabs=document.querySelectorAll('.faq-tab');
+const panels=document.querySelectorAll('.faq-panel');
+tabs.forEach(tab=>tab.addEventListener('click',()=>{
+  tabs.forEach(t=>t.setAttribute('aria-selected','false'));
+  panels.forEach(p=>p.classList.remove('active'));
+  tab.setAttribute('aria-selected','true');
+  document.getElementById(tab.dataset.panel).classList.add('active');
+}));
+
+// Scroll reveal
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
