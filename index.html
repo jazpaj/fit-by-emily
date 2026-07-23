@@ -133,11 +133,23 @@ a{color:inherit}
 
 /* ---------- Coach ---------- */
 .coach{
+  position:relative;overflow:hidden;
   background:
     radial-gradient(ellipse 60% 50% at 85% 0%, rgba(240,129,83,.16), transparent 60%),
     radial-gradient(ellipse 60% 50% at 15% 100%, rgba(232,56,168,.14), transparent 60%),
     var(--navy);
   color:var(--cream)
+}
+.coach .wrap{position:relative;z-index:1}
+.coach-deco{position:absolute;inset:0;z-index:0;pointer-events:none}
+.coach-deco .deco{position:absolute;color:var(--blush);opacity:.07}
+.coach-deco .deco-dumbbell{top:4%;right:6%;width:130px;height:auto;transform:rotate(-18deg)}
+.coach-deco .deco-pulse{top:46%;left:50%;width:380px;height:auto;transform:translate(-50%,-50%)}
+.coach-deco .deco-kettlebell{bottom:5%;left:5%;width:110px;height:auto;transform:rotate(10deg)}
+@media(max-width:800px){
+  .coach-deco .deco-dumbbell{width:90px;top:2%;right:2%}
+  .coach-deco .deco-pulse{width:240px}
+  .coach-deco .deco-kettlebell{width:80px}
 }
 .coach .coach-entry{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center}
 .coach .coach-entry + .coach-entry{margin-top:5rem}
@@ -346,6 +358,22 @@ footer a:hover{text-decoration:underline}
 
 <!-- COACH -->
 <section class="section coach" id="coach">
+  <div class="coach-deco" aria-hidden="true">
+    <svg class="deco deco-dumbbell" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="12" width="14" height="16" rx="3"/>
+      <rect x="84" y="12" width="14" height="16" rx="3"/>
+      <line x1="16" y1="20" x2="84" y2="20"/>
+      <rect x="22" y="8" width="6" height="24" rx="2"/>
+      <rect x="72" y="8" width="6" height="24" rx="2"/>
+    </svg>
+    <svg class="deco deco-pulse" viewBox="0 0 200 40" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="0,20 40,20 50,4 60,36 70,20 90,20 100,8 110,32 120,20 200,20"/>
+    </svg>
+    <svg class="deco deco-kettlebell" viewBox="0 0 60 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 16a10 10 0 0 1 20 0"/>
+      <rect x="10" y="16" width="40" height="40" rx="16"/>
+    </svg>
+  </div>
   <div class="wrap">
     <div class="coach-entry">
       <div class="coach-photo reveal">
