@@ -104,32 +104,69 @@ a{color:inherit}
 
 /* ---------- Offers ---------- */
 .offers{background:var(--cream)}
-.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem}
-.offer{
-  background:#fff;border-radius:6px;padding:2.6rem;position:relative;
-  border:1px solid var(--line);display:flex;flex-direction:column
+.section-head .eyebrow-bar{
+  display:block;width:64px;height:3px;border-radius:2px;margin:.5rem 0 1.1rem;
+  background:linear-gradient(90deg,var(--magenta),var(--orange))
 }
-.offer.six{border-top:6px solid var(--magenta)}
-.offer.twelve{border-top:6px solid var(--orange)}
+.section-head h2 .accent{
+  font-style:italic;
+  background:linear-gradient(90deg,var(--magenta),var(--orange));
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.offers-divider{display:flex;align-items:center;gap:1rem;max-width:480px;margin:2.2rem 0 2.8rem}
+.offers-divider .line{flex:1;height:2px;background:var(--magenta);border-radius:2px}
+.offers-divider .line.right{background:var(--orange)}
+.offers-divider svg{width:26px;height:26px;color:var(--magenta);flex-shrink:0}
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem}
+.offer{
+  background:#fff;border-radius:14px;padding:2.6rem 2.6rem 2.6rem 2.9rem;position:relative;
+  border:1px solid var(--line);display:flex;flex-direction:column;
+  box-shadow:0 24px 48px -30px rgba(30,60,80,.35);
+  transition:transform .2s ease,box-shadow .2s ease
+}
+.offer:hover{transform:translateY(-4px);box-shadow:0 30px 54px -26px rgba(30,60,80,.4)}
+.offer.six{border-top:5px solid var(--magenta)}
+.offer.twelve{border-top:5px solid var(--orange)}
+.offer-badge{
+  position:absolute;top:2.6rem;left:-24px;width:50px;height:50px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  box-shadow:0 12px 24px -10px rgba(30,60,80,.45)
+}
+.offer-badge svg{width:24px;height:24px}
+.offer.six .offer-badge{background:var(--magenta)}
+.offer.twelve .offer-badge{background:var(--orange)}
 .offer .kicker{font-family:"Droid Serif",serif;font-style:italic;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:.72rem}
 .offer.six .kicker{color:var(--magenta)}
 .offer.twelve .kicker{color:var(--orange)}
 .offer h3{font-size:2.4rem;margin:.5rem 0 .3rem;color:var(--navy)}
 .offer .sub{font-style:italic;color:var(--muted);font-size:1.02rem;margin-bottom:1.4rem}
 .offer .question{
-  background:var(--cream);border-left:3px solid;padding:.9rem 1.1rem;
-  font-style:italic;font-size:1rem;margin:0 0 1.4rem;border-radius:0 4px 4px 0
+  position:relative;border-left:3px solid;padding:.9rem 1.1rem .9rem 2.4rem;
+  font-style:italic;font-size:1rem;margin:0 0 1.4rem;border-radius:0 8px 8px 0
 }
-.offer.six .question{border-color:var(--magenta)}
-.offer.twelve .question{border-color:var(--orange)}
+.offer .question::before{
+  content:"\201C";position:absolute;left:.5rem;top:-.1rem;
+  font-family:Georgia,serif;font-size:2.2rem;line-height:1;opacity:.55
+}
+.offer.six .question{border-color:var(--magenta);background:rgba(232,56,168,.06)}
+.offer.six .question::before{color:var(--magenta)}
+.offer.twelve .question{border-color:var(--orange);background:rgba(240,129,83,.08)}
+.offer.twelve .question::before{color:var(--orange)}
 .offer .desc{color:var(--ink);margin-bottom:1.6rem;flex-grow:1}
 .offer .price-row{display:flex;align-items:baseline;gap:.6rem;margin-bottom:1.5rem;min-height:2.6rem}
 .offer .price{font-family:"Anton",sans-serif;font-size:2.6rem;color:var(--navy);line-height:1}
 .offer .price small{font-size:.9rem;font-family:"Droid Serif",serif;color:var(--muted);font-style:italic}
 .offer .noprice{font-style:italic;color:var(--muted);font-size:1rem;align-self:center}
-.offer .btn{width:100%;text-align:center}
-.offer .foot{margin-top:1rem;font-size:.85rem;color:var(--muted);text-align:center;font-style:italic}
-@media(max-width:800px){.offer-grid{grid-template-columns:1fr}}
+.offer .btn{width:100%;text-align:center;border-radius:10px}
+.offer.six .btn{background:linear-gradient(135deg,var(--magenta),#ff6bc9);box-shadow:0 14px 28px -12px var(--magenta)}
+.offer.twelve .btn{background:linear-gradient(135deg,var(--orange),#ffab6b);box-shadow:0 14px 28px -12px var(--orange)}
+.offer .foot{margin-top:1rem;font-size:.85rem;color:var(--muted);text-align:center;font-style:italic;display:flex;align-items:center;justify-content:center;gap:.4rem}
+.offer .foot svg{width:14px;height:14px;flex-shrink:0}
+@media(max-width:800px){
+  .offer-grid{grid-template-columns:1fr}
+  .offer{padding-left:2.6rem;margin-top:1.4rem}
+  .offer-badge{top:-22px;left:2rem}
+}
 
 /* ---------- Coach ---------- */
 .coach{
@@ -380,12 +417,27 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Choose your starting point</span>
-      <h2>Where are you in your journey?</h2>
+      <span class="eyebrow-bar" aria-hidden="true"></span>
+      <h2>Where are you in your <span class="accent">journey?</span></h2>
       <p>These aren't a cheaper option and a pricier one. They're two different stages. The right one depends on what your week looks like right now — not your budget.</p>
+    </div>
+    <div class="offers-divider reveal" aria-hidden="true">
+      <span class="line"></span>
+      <svg viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="12" width="14" height="16" rx="3"/>
+        <rect x="84" y="12" width="14" height="16" rx="3"/>
+        <line x1="16" y1="20" x2="84" y2="20"/>
+        <rect x="22" y="8" width="6" height="24" rx="2"/>
+        <rect x="72" y="8" width="6" height="24" rx="2"/>
+      </svg>
+      <span class="line right"></span>
     </div>
     <div class="offer-grid">
 
       <div class="offer six reveal">
+        <div class="offer-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><polyline points="8 14 11 17 16 12"/></svg>
+        </div>
         <span class="kicker">The reset · 6 weeks · Led by Mieke</span>
         <h3>Structured in 6</h3>
         <p class="sub">We change your lifestyle so your transformation becomes sustainable.</p>
@@ -395,10 +447,16 @@ footer a:hover{text-decoration:underline}
           <span class="price">&euro;299<small> / 6 weeks</small></span>
         </div>
         <a class="btn btn-magenta" href="#BUY">Buy Structured in 6</a>
-        <div class="foot">Instant access — start this week.</div>
+        <div class="foot">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg>
+          Instant access — start this week.
+        </div>
       </div>
 
       <div class="offer twelve reveal">
+        <div class="offer-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg>
+        </div>
         <span class="kicker">The transformation · 12 weeks · Led by Emily</span>
         <h3>Transformed in 12</h3>
         <p class="sub">We completely transform your physique — because your lifestyle already supports it.</p>
@@ -408,7 +466,10 @@ footer a:hover{text-decoration:underline}
           <span class="noprice">Every transformation is personal — so let's talk about yours first.</span>
         </div>
         <a class="btn btn-orange" href="http://fitbyemily.co/call-booking-page">Book a call with Emily</a>
-        <div class="foot">A short call to map the right plan for you.</div>
+        <div class="foot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.4 2.1L8 10.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg>
+          A short call to map the right plan for you.
+        </div>
       </div>
 
     </div>
