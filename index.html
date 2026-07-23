@@ -132,17 +132,31 @@ a{color:inherit}
 @media(max-width:800px){.offer-grid{grid-template-columns:1fr}}
 
 /* ---------- Coach ---------- */
-.coach{background:var(--navy);color:var(--cream)}
+.coach{
+  background:
+    radial-gradient(ellipse 60% 50% at 85% 0%, rgba(240,129,83,.16), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 15% 100%, rgba(232,56,168,.14), transparent 60%),
+    var(--navy);
+  color:var(--cream)
+}
 .coach .coach-entry{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center}
-.coach .coach-entry + .coach-entry{margin-top:4.5rem}
+.coach .coach-entry + .coach-entry{margin-top:5rem}
 .coach .coach-entry.reverse{grid-template-columns:1.1fr .9fr}
 .coach .coach-entry.reverse .coach-photo{order:2}
 .coach .coach-entry.reverse .coach-text{order:1}
-.coach-photo{border-radius:6px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);aspect-ratio:4/5}
+.coach-photo{
+  border-radius:6px;overflow:hidden;aspect-ratio:4/5;
+  box-shadow:-16px 16px 0 var(--orange),0 30px 60px -30px rgba(0,0,0,.6)
+}
+.coach .coach-entry.reverse .coach-photo{box-shadow:16px 16px 0 var(--magenta),0 30px 60px -30px rgba(0,0,0,.6)}
 .coach-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .coach .eyebrow{color:var(--blush)}
 .coach h2{color:#fff}
-.coach h2 .role{display:block;font-size:.44em;color:var(--orange);margin-top:.5rem}
+.coach h2 .role{
+  display:inline-block;font-size:.4em;letter-spacing:1px;margin-top:.7rem;
+  padding:.35em 1em;border-radius:100px;background:var(--orange);color:var(--navy-deep)
+}
+.coach .coach-entry.reverse h2 .role{background:var(--magenta);color:#fff}
 .coach p{color:#cfdae1;margin-top:1.3rem;font-size:1.05rem}
 .creds{list-style:none;margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:.7rem}
 .creds li{
