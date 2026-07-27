@@ -279,6 +279,12 @@ a{color:inherit}
 .inc-item:nth-child(even) .dot{background:var(--orange)}
 .inc-item strong{font-family:"Anton",sans-serif;font-weight:400;font-size:1rem;letter-spacing:.5px;color:var(--navy);text-transform:uppercase}
 .inc-item p{margin:.2rem 0 0;font-size:.92rem;color:var(--muted)}
+.inc-item .inc-tags{list-style:none;margin:.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
+.inc-item .inc-tags li{
+  font-family:"Droid Serif",serif;font-style:italic;font-size:.75rem;
+  padding:.2rem .7rem;border-radius:100px;background:rgba(232,56,168,.1);color:var(--magenta)
+}
+.inc-item:nth-child(even) .inc-tags li{background:rgba(240,129,83,.12);color:var(--orange)}
 @media(max-width:800px){.inc-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.inc-grid{grid-template-columns:1fr}}
 
@@ -658,12 +664,12 @@ footer a:hover{text-decoration:underline}
     </div>
     <div class="inc-grid">
       <div class="inc-item reveal"><span class="dot"></span><div><strong>6-Week Training Plan</strong><p>Tailored to your experience, goals and equipment.</p></div></div>
-      <div class="inc-item reveal"><span class="dot"></span><div><strong>Nutrition Guidance</strong><p>A sustainable way of eating, not another crash diet.</p></div></div>
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>Nutrition Without Tracking</strong><p>A sustainable way of eating, not another crash diet.</p></div></div>
       <div class="inc-item reveal"><span class="dot"></span><div><strong>Weekly Check-Ins</strong><p>1:1 reviews with Mieke, with feedback and adjustments.</p></div></div>
-      <div class="inc-item reveal"><span class="dot"></span><div><strong>Recipe Guide</strong><p>Simple, repeatable meals that make eating well easy.</p></div></div>
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>Recipe Guide</strong><p>Simple, repeatable meals that make eating well easy.</p><ul class="inc-tags"><li>Vegetarian</li><li>Dairy Intolerant</li></ul></div></div>
       <div class="inc-item reveal"><span class="dot"></span><div><strong>Habit Tracker</strong><p>Keep the small daily wins visible and stacking up.</p></div></div>
-      <div class="inc-item reveal"><span class="dot"></span><div><strong>WhatsApp Support</strong><p>Direct access when a question comes up mid-week.</p></div></div>
-      <div class="inc-item reveal"><span class="dot"></span><div><strong>Facebook Community</strong><p>Train alongside others on the same journey.</p></div></div>
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>Direct Chat Access</strong><p>Direct access when a question comes up mid-week.</p></div></div>
+      <div class="inc-item reveal"><span class="dot"></span><div><strong>WhatsApp Group Community</strong><p>Train alongside others on the same journey.</p></div></div>
     </div>
   </div>
 </section>
