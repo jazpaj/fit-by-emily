@@ -153,6 +153,20 @@ a{color:inherit}
 .offer.twelve .question{border-color:var(--orange);background:rgba(240,129,83,.08)}
 .offer.twelve .question::before{color:var(--orange)}
 .offer .desc{color:var(--ink);margin-bottom:1.6rem;flex-grow:1}
+.offer .offer-list{list-style:none;margin:0 0 1.6rem;flex-grow:1;display:flex;flex-direction:column;gap:.75rem}
+.offer .offer-list li{position:relative;padding-left:2rem;color:var(--ink);font-size:.98rem;line-height:1.5}
+.offer .offer-list li::before{
+  content:"";position:absolute;left:0;top:.15em;width:1.3rem;height:1.3rem;border-radius:50%;
+  background-repeat:no-repeat;background-position:center;background-size:.8rem
+}
+.offer.six .offer-list li::before{
+  background-color:rgba(232,56,168,.12);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E838A8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>")
+}
+.offer.twelve .offer-list li::before{
+  background-color:rgba(240,129,83,.14);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F08153' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>")
+}
 .offer .price-row{display:flex;align-items:baseline;gap:.6rem;margin-bottom:1.5rem;min-height:2.6rem}
 .offer .price{font-family:"Anton",sans-serif;font-size:2.6rem;color:var(--navy);line-height:1}
 .offer .price small{font-size:.9rem;font-family:"Droid Serif",serif;color:var(--muted);font-style:italic}
@@ -474,8 +488,13 @@ footer a:hover{text-decoration:underline}
         <span class="kicker">The reset · 6 weeks · Led by Mieke</span>
         <h3>Structured in 6</h3>
         <p class="sub">We change your lifestyle so your transformation becomes sustainable.</p>
-        <div class="question">"How do we make healthy behaviours become your default?"</div>
-        <p class="desc">The first step in your journey to regaining control, building the habits, routines and mindset that set you up for long-term success. Ideal if you feel stuck, overwhelmed or you keep starting and stopping.</p>
+        <ul class="offer-list">
+          <li>Personalised coaching focused on rebuilding healthy habits.</li>
+          <li>Ideal if you're struggling with consistency, routine, or motivation.</li>
+          <li>Prioritises nutrition, movement, sleep, and sustainable behaviours.</li>
+          <li>Helps you regain control before focusing on body transformation.</li>
+          <li>The perfect stepping stone if meticulous coaching feels overwhelming right now.</li>
+        </ul>
         <div class="price-row">
           <span class="price">&euro;299<small> / 6 weeks</small></span>
         </div>
