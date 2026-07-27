@@ -313,6 +313,36 @@ a{color:inherit}
 .testimonial-card figcaption{font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);font-size:.95rem}
 @media(max-width:800px){.testimonial-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.testimonial-grid{grid-template-columns:1fr}}
+.testimonial-featured{
+  max-width:840px;margin:2.8rem auto 0;background:#fff;border-radius:16px;
+  box-shadow:0 26px 56px -30px rgba(30,60,80,.4);padding:2.8rem;
+  display:flex;gap:2.4rem;align-items:center;text-align:left
+}
+.testimonial-featured img{
+  width:170px;height:170px;border-radius:50%;object-fit:cover;flex-shrink:0;
+  box-shadow:0 14px 30px -14px rgba(30,60,80,.5);border:4px solid #fff;
+  outline:3px solid rgba(232,56,168,.25)
+}
+.testimonial-featured .tf-body{flex:1}
+.testimonial-featured .stars{display:flex;gap:.25rem;color:var(--orange);margin-bottom:.9rem}
+.testimonial-featured .stars svg{width:18px;height:18px}
+.testimonial-featured blockquote{
+  margin:0;color:var(--ink);font-size:1.05rem;line-height:1.7;font-style:italic;position:relative
+}
+.testimonial-featured blockquote::before{
+  content:"\201C";position:absolute;left:-.1em;top:-.5em;font-family:Georgia,serif;
+  font-size:3rem;line-height:1;color:var(--magenta);opacity:.28
+}
+.testimonial-featured figcaption{
+  margin-top:1.1rem;font-family:"Anton",sans-serif;text-transform:uppercase;
+  letter-spacing:.5px;color:var(--navy);font-size:1.05rem
+}
+@media(max-width:700px){
+  .testimonial-featured{flex-direction:column;text-align:center;padding:2rem 1.6rem;gap:1.4rem}
+  .testimonial-featured img{width:130px;height:130px}
+  .testimonial-featured .stars{justify-content:center}
+  .testimonial-featured blockquote::before{display:none}
+}
 
 /* ---------- FAQ ---------- */
 .faq{background:var(--navy);color:var(--cream)}
@@ -709,17 +739,20 @@ footer a:hover{text-decoration:underline}
       <div class="t-underline" aria-hidden="true"></div>
     </div>
 
-    <!-- Testimonial cards go here. Copy this template per client:
-    <div class="testimonial-grid">
-      <figure class="testimonial-card">
-        <img src="assets/CLIENT.jpg" alt="Client name">
-        <blockquote>Their testimony goes here.</blockquote>
-        <figcaption>Client Name</figcaption>
-      </figure>
-    </div>
-    -->
-
-    <p class="t-placeholder">Real stories from real women, coming soon.</p>
+    <figure class="testimonial-featured reveal">
+      <img src="assets/Maria Carroll.png" alt="Maria Carroll, Fit by Emily client">
+      <div class="tf-body">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+        </div>
+        <blockquote>I'm so grateful for all of your help and guidance Emily. It's been enjoyable over the past few months and I'm feeling great! During this hot weather it's been great to be able to wear shorts and not feel really self conscious. My clothes are fitting better which is an unreal feeling. I really appreciate everything you've done, your attention to detail and constant check-ins have been so good. I'm glad I finally broke the bad habits that I couldn't for years! You're a life saver.</blockquote>
+        <figcaption>Maria Carroll</figcaption>
+      </div>
+    </figure>
   </div>
 </section>
 
