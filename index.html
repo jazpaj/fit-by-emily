@@ -60,7 +60,8 @@ a{color:inherit}
   position:sticky;top:0;z-index:50;background:rgba(30,60,80,.94);
   backdrop-filter:blur(8px);border-bottom:1px solid rgba(241,198,190,.18)
 }
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+.topbar .wrap{width:auto;max-width:none;margin-inline:0;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 4vw}
+.nav-actions{display:flex;align-items:center;gap:.7rem}
 .brandmark{display:flex;align-items:center;gap:.75rem;text-decoration:none}
 .brandmark img{height:76px;width:auto;display:block}
 .brandmark small{font-family:"Droid Serif",serif;font-style:italic;font-size:.68rem;color:var(--blush);letter-spacing:1px}
@@ -556,7 +557,10 @@ footer a:hover{text-decoration:underline}
     <a class="brandmark" href="#top" aria-label="Fit by Emily Coaching Team, home">
       <img src="assets/logo.png" alt="Fit by Emily">
     </a>
-    <a class="btn btn-magenta nav-cta" href="#offers">View the programmes</a>
+    <div class="nav-actions">
+      <a class="btn btn-magenta nav-cta" href="#offers">View the programmes</a>
+      <a class="btn btn-orange nav-cta" href="#book">Book a call</a>
+    </div>
   </div>
 </header>
 
