@@ -512,6 +512,15 @@ details .answer{padding:0 0 1.3rem;color:#cfdae1;max-width:70ch}
   background:#25D366;color:#fff;box-shadow:0 14px 28px -12px rgba(37,211,102,.7)
 }
 .btn-whatsapp svg{width:20px;height:20px}
+.final-calendar{max-width:840px;margin:2.8rem auto 0}
+.final-cal-title{
+  font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);
+  font-size:1.6rem;text-align:center;margin-bottom:1.3rem;
+  display:flex;align-items:center;justify-content:center;gap:.8rem
+}
+.final-cal-title::before,.final-cal-title::after{content:"";width:30px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--magenta),var(--orange))}
+.cal-embed{background:#fff;border-radius:14px;box-shadow:0 24px 50px -30px rgba(30,60,80,.4);overflow:hidden;padding:.4rem}
+.cal-embed iframe{width:100%;border:none;display:block;min-height:720px}
 
 /* ---------- Footer ---------- */
 footer{background:var(--navy-deep);color:#8ea3b0;padding:3rem 0;text-align:center}
@@ -1034,15 +1043,15 @@ footer a:hover{text-decoration:underline}
         </div>
       </div>
     </div>
-    <div class="final-undecided reveal">
-      <p>If you have questions about either program or would like to book a call, message me directly here:</p>
-      <a class="btn btn-whatsapp" href="https://wa.me/447915357443" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.3a8.3 8.3 0 0 1-4.2-1.16l-.3-.18-3.1.92.93-3.02-.2-.31A8.3 8.3 0 1 1 12 20.3zm4.6-6.2c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
-        Message Emily on WhatsApp
-      </a>
+    <div class="final-calendar reveal">
+      <h3 class="final-cal-title">Book your call</h3>
+      <div class="cal-embed">
+        <iframe src="https://api.leadconnectorhq.com/widget/booking/s1Yi9A4pmof5vnTU0J3h" scrolling="no" id="s1Yi9A4pmof5vnTU0J3h_1748000000000" title="Book a call with Fit by Emily"></iframe>
+      </div>
     </div>
   </div>
 </section>
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
 
 <!-- FOOTER -->
 <footer>
