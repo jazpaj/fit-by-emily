@@ -512,15 +512,26 @@ details .answer{padding:0 0 1.3rem;color:#cfdae1;max-width:70ch}
   background:#25D366;color:#fff;box-shadow:0 14px 28px -12px rgba(37,211,102,.7)
 }
 .btn-whatsapp svg{width:20px;height:20px}
-.final-calendar{max-width:840px;margin:2.8rem auto 0;scroll-margin-top:110px}
+.final-calendar{max-width:1080px;margin:2.8rem auto 0;scroll-margin-top:110px}
 .final-cal-title{
   font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);
-  font-size:1.6rem;text-align:center;margin-bottom:1.3rem;
+  font-size:1.6rem;text-align:center;margin-bottom:1.6rem;
   display:flex;align-items:center;justify-content:center;gap:.8rem
 }
 .final-cal-title::before,.final-cal-title::after{content:"";width:30px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--magenta),var(--orange))}
+.cal-layout{display:grid;grid-template-columns:1fr 1.05fr;gap:2.4rem;align-items:start;text-align:left}
+.cal-info p{color:var(--ink);font-size:1.02rem;line-height:1.7;margin-bottom:1.2rem}
+.cal-info-lead{font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);font-size:1.05rem;margin-bottom:1.1rem}
+.cal-steps{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:1rem}
+.cal-steps li{counter-increment:step;position:relative;padding-left:2.9rem;color:var(--ink);line-height:1.55}
+.cal-steps li::before{
+  content:counter(step);position:absolute;left:0;top:-.1em;width:1.9rem;height:1.9rem;border-radius:50%;
+  background:linear-gradient(135deg,var(--magenta),var(--orange));color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:"Anton",sans-serif;font-size:.95rem
+}
 .cal-embed{background:#fff;border-radius:14px;box-shadow:0 24px 50px -30px rgba(30,60,80,.4);overflow:hidden;padding:.4rem}
 .cal-embed iframe{width:100%;border:none;display:block;min-height:720px}
+@media(max-width:820px){.cal-layout{grid-template-columns:1fr;gap:1.8rem}}
 
 /* ---------- Footer ---------- */
 footer{background:var(--navy-deep);color:#8ea3b0;padding:3rem 0;text-align:center}
@@ -1045,8 +1056,19 @@ footer a:hover{text-decoration:underline}
     </div>
     <div class="final-calendar reveal" id="book">
       <h3 class="final-cal-title">Book your call</h3>
-      <div class="cal-embed">
-        <iframe src="https://api.leadconnectorhq.com/widget/booking/s1Yi9A4pmof5vnTU0J3h" scrolling="no" id="s1Yi9A4pmof5vnTU0J3h_1748000000000" title="Book a call with Fit by Emily"></iframe>
+      <div class="cal-layout">
+        <div class="cal-info">
+          <p>This is a free consultation call to give us the opportunity to meet face to face and discuss your goals, obstacles you face in achieving them, the approach and timeline I would implement for getting from where you are now to becoming the fit, healthy and confident woman you want to be!</p>
+          <p class="cal-info-lead">On this call, we will:</p>
+          <ol class="cal-steps">
+            <li>Take a look at where you're currently at to see what's working or not working.</li>
+            <li>Identify what's possible for you to see real results within the next 90 days.</li>
+            <li>Create an action plan to help you feel comfortable and confident with training and nutrition.</li>
+          </ol>
+        </div>
+        <div class="cal-embed">
+          <iframe src="https://api.leadconnectorhq.com/widget/booking/s1Yi9A4pmof5vnTU0J3h" scrolling="no" id="s1Yi9A4pmof5vnTU0J3h_1748000000000" title="Book a call with Fit by Emily"></iframe>
+        </div>
       </div>
     </div>
   </div>
