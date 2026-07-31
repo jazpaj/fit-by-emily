@@ -519,10 +519,19 @@ details .answer{padding:0 0 1.3rem;color:#cfdae1;max-width:70ch}
 .final-calendar{max-width:1080px;margin:2.8rem auto 0;scroll-margin-top:110px}
 .final-cal-title{
   font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);
-  font-size:1.6rem;text-align:center;margin-bottom:1.6rem;
+  font-size:1.6rem;text-align:center;margin-bottom:.7rem;
   display:flex;align-items:center;justify-content:center;gap:.8rem
 }
 .final-cal-title::before,.final-cal-title::after{content:"";width:30px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--magenta),var(--orange))}
+.cal-note{
+  text-align:center;margin:0 auto 1.8rem;font-size:.9rem;font-style:italic;color:var(--muted);
+  display:inline-flex;align-items:center;gap:.5rem;width:100%;justify-content:center
+}
+.cal-note .tag{
+  font-family:"Droid Serif",serif;font-style:normal;font-weight:700;letter-spacing:.5px;
+  text-transform:uppercase;font-size:.72rem;padding:.25rem .8rem;border-radius:100px;
+  background:rgba(240,129,83,.14);color:var(--orange)
+}
 .cal-layout{display:grid;grid-template-columns:1fr 1.05fr;gap:2.4rem;align-items:start;text-align:left}
 .cal-info p{color:var(--ink);font-size:1.02rem;line-height:1.7;margin-bottom:1.2rem}
 .cal-info-lead{font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);font-size:1.05rem;margin-bottom:1.1rem}
@@ -1078,6 +1087,7 @@ footer a:hover{text-decoration:underline}
     </div>
     <div class="final-calendar reveal" id="book">
       <h3 class="final-cal-title">Book your call</h3>
+      <p class="cal-note">This call is for <span class="tag">Transformed in 12</span></p>
       <div class="cal-layout">
         <div class="cal-info">
           <p>This is a free consultation call to give us the opportunity to meet face to face and discuss your goals, obstacles you face in achieving them, the approach and timeline I would implement for getting from where you are now to becoming the fit, healthy and confident woman you want to be!</p>
