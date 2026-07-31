@@ -289,10 +289,11 @@ a{color:inherit}
 .out-num{
   flex-shrink:0;width:62px;display:flex;align-items:center;justify-content:center;
   font-family:"Anton",sans-serif;font-size:1.5rem;color:#fff;letter-spacing:.5px;
-  background:linear-gradient(135deg,var(--magenta),#ff6bc9)
+  background:linear-gradient(135deg,var(--magenta),var(--orange))
 }
-.out-item:nth-child(even) .out-num{background:linear-gradient(135deg,var(--orange),#ffab6b)}
-.out-item .label{padding:.9rem 1.15rem;color:var(--navy);font-weight:700;font-size:.98rem;line-height:1.3;display:flex;align-items:center}
+.out-item .label{flex:1;padding:.9rem .8rem .9rem 1.15rem;color:var(--navy);font-weight:700;font-size:.98rem;line-height:1.3;display:flex;align-items:center}
+.out-icon{flex-shrink:0;display:flex;align-items:center;padding-right:1.15rem;color:var(--magenta)}
+.out-icon svg{width:1.3rem;height:1.3rem}
 @media(max-width:640px){.out-grid{grid-template-columns:1fr}}
 
 /* ---------- Included ---------- */
@@ -806,16 +807,16 @@ footer a:hover{text-decoration:underline}
     <h3 class="inc-sub reveal">The Outcomes</h3>
     <p class="inc-sub-p reveal">What clients walk away with after their six weeks.</p>
     <div class="out-grid">
-      <div class="out-item reveal"><span class="out-num">01</span><span class="label">Regain control around food</span></div>
-      <div class="out-item reveal"><span class="out-num">02</span><span class="label">Stop feeling overwhelmed</span></div>
-      <div class="out-item reveal"><span class="out-num">03</span><span class="label">More energy day to day</span></div>
-      <div class="out-item reveal"><span class="out-num">04</span><span class="label">A routine that finally sticks</span></div>
-      <div class="out-item reveal"><span class="out-num">05</span><span class="label">Exercise that feels easier</span></div>
-      <div class="out-item reveal"><span class="out-num">06</span><span class="label">More confidence and self-belief</span></div>
-      <div class="out-item reveal"><span class="out-num">07</span><span class="label">More mental clarity</span></div>
-      <div class="out-item reveal"><span class="out-num">08</span><span class="label">Better health and wellbeing</span></div>
-      <div class="out-item reveal"><span class="out-num">09</span><span class="label">More present with your family</span></div>
-      <div class="out-item reveal"><span class="out-num">10</span><span class="label">A foundation for lasting change</span></div>
+      <div class="out-item reveal"><span class="out-num">01</span><span class="label">Regain control around food</span><span class="out-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20c-3.5 0-6-3.5-6-7 0-2.8 1.8-5 4-5 1 0 1.5.5 2 .5s1-.5 2-.5c2.2 0 4 2.2 4 5 0 3.5-2.5 7-6 7z"/><path d="M12 8c0-2 1-3.5 3-3.5"/></svg></span></div>
+      <div class="out-item reveal"><span class="out-num">02</span><span class="label">Stop feeling overwhelmed</span><span class="out-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5s1.3 1.8 3.5 1.8 3.5-1.8 3.5-1.8"/><line x1="9" y1="10" x2="9" y2="10"/><line x1="15" y1="10" x2="15" y2="10"/></svg></span></div>
+      <div class="out-item reveal"><span class="out-num">03</span><span class="label">More energy day to day</span><span class="out-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span></div>
+      <div class="out-item reveal"><span class="out-num">04</span><span class="label">A routine that finally sticks</span><span class="out-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><polyline points="9 14 11 16 15 12"/></svg></span></div>
+      <div class="out-item reveal"><span class="out-num">05</span><span class="label">Exercise that feels easier</span><span class="out-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="3" height="6" rx="1"/><rect x="19" y="9" width="3" height="6" rx="1"/><line x1="5" y1="12" x2="19" y2="12"/><line x1="6.5" y1="10" x2="6.5" y2="14"/><line x1="17.5" y1="10" x2="17.5" y2="14"/></svg></span></div>
+      <div class="out-item reveal"><span class="out-num">06</span><span class="label">More confidence and self-belief</span><span class="out-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span></div>
+      <div class="out-item reveal"><span class="out-num">07</span><span class="label">More mental clarity</span><span class="out-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg></span></div>
+      <div class="out-item reveal"><span class="out-num">08</span><span class="label">Better health and wellbeing</span><span class="out-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C6 16.5 3 12.5 3 8.5A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9 2.5c0 4-3 8-9 12.5z"/></svg></span></div>
+      <div class="out-item reveal"><span class="out-num">09</span><span class="label">More present with your family</span><span class="out-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span></div>
+      <div class="out-item reveal"><span class="out-num">10</span><span class="label">A foundation for lasting change</span><span class="out-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 4H4v2a4 4 0 0 0 4 4"/><path d="M17 4h3v2a4 4 0 0 1-4 4"/></svg></span></div>
     </div>
   </div>
 </section>
