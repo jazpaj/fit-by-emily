@@ -351,6 +351,15 @@ a{color:inherit}
   box-shadow:0 14px 30px -14px rgba(30,60,80,.5);border:4px solid #fff;
   outline:3px solid rgba(232,56,168,.25)
 }
+.tf-avatar{
+  width:170px;height:170px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;color:var(--magenta);
+  background:linear-gradient(135deg,rgba(232,56,168,.12),rgba(240,129,83,.14));
+  border:4px solid #fff;outline:3px solid rgba(232,56,168,.25);
+  box-shadow:0 14px 30px -14px rgba(30,60,80,.5)
+}
+.tf-avatar svg{width:88px;height:88px;opacity:.85}
+@media(max-width:700px){.tf-avatar{width:130px;height:130px}.tf-avatar svg{width:66px;height:66px}}
 .testimonial-featured .tf-body{flex:1}
 .testimonial-featured .stars,.testimonial-quad .stars{display:flex;gap:.25rem;color:var(--orange);margin-bottom:.9rem}
 .testimonial-featured .stars svg,.testimonial-quad .stars svg{width:18px;height:18px}
@@ -874,12 +883,9 @@ footer a:hover{text-decoration:underline}
       </div>
     </figure>
 
-    <figure class="testimonial-quad reveal">
-      <div class="tq-photos">
-        <img src="assets/Aoife1.jpeg" alt="Aoife Keaney progress with Fit by Emily">
-        <img src="assets/Aoife2.jpeg" alt="Aoife Keaney progress with Fit by Emily">
-        <img src="assets/Aoife3.jpeg" alt="Aoife Keaney progress with Fit by Emily">
-        <img src="assets/Aoife4.jpeg" alt="Aoife Keaney progress with Fit by Emily">
+    <figure class="testimonial-featured reveal">
+      <div class="tf-avatar" role="img" aria-label="Photo coming soon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.5 9.5C18.5 5.9 15.6 3 12 3S5.5 5.9 5.5 9.5c0 1.9.8 3.6 2.1 4.8-2.1 1-3.7 2.9-4.3 5.2-.2.7.3 1.5 1.1 1.5h15.2c.8 0 1.3-.8 1.1-1.5-.6-2.3-2.2-4.2-4.3-5.2 1.3-1.2 2.1-2.9 2.1-4.8zM9 8.5c.6-1.2 1.7-2 3-2s2.4.8 3 2c-.9.5-1.9.8-3 .8s-2.1-.3-3-.8zM8 10.4c1.1.7 2.5 1.1 4 1.1s2.9-.4 4-1.1c-.4 2-2.1 3.6-4 3.6s-3.6-1.6-4-3.6z"/></svg>
       </div>
       <div class="tf-body">
         <div class="stars" aria-label="5 out of 5 stars">
