@@ -565,6 +565,24 @@ details .answer{padding:0 0 1.3rem;color:#cfdae1;max-width:70ch}
 .final-card .foot svg{width:14px;height:14px;flex-shrink:0}
 @media(max-width:640px){.card-head{gap:.8rem}.card-icon{width:52px;height:52px}.card-icon svg{width:24px;height:24px}}
 @media(max-width:640px){.final-cards{grid-template-columns:1fr}}
+/* compact "ways to work" mini cards */
+.final-mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;max-width:980px;margin:2.2rem auto 0;text-align:left}
+.final-mini{
+  position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;border-top:4px solid var(--magenta);
+  padding:1.3rem 1.4rem;display:flex;flex-direction:column;gap:.45rem;
+  box-shadow:0 16px 34px -26px rgba(30,60,80,.4);transition:transform .18s ease,box-shadow .18s ease
+}
+.final-mini:hover{transform:translateY(-3px);box-shadow:0 22px 40px -24px rgba(30,60,80,.45)}
+.final-mini.twelve,.final-mini.hybrid{border-top-color:var(--orange)}
+.final-mini.online{border-top:4px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,var(--magenta),var(--orange)) border-box}
+.final-mini .fm-tag{font-family:"Droid Serif",serif;font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-size:.66rem;color:var(--magenta)}
+.final-mini.twelve .fm-tag,.final-mini.hybrid .fm-tag{color:var(--orange)}
+.final-mini h4{font-family:"Anton",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.5px;color:var(--navy);font-size:1.2rem;line-height:1.05;margin:0}
+.final-mini p{color:var(--muted);font-size:.9rem;line-height:1.45;margin:0;flex-grow:1}
+.final-mini .fm-cta{margin-top:.5rem;display:inline-flex;align-items:center;gap:.35rem;font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.5px;font-size:.82rem;color:var(--magenta);text-decoration:none;transition:gap .15s ease}
+.final-mini.twelve .fm-cta,.final-mini.hybrid .fm-cta{color:var(--orange)}
+.final-mini .fm-cta:hover{gap:.6rem}
+.final-mini .fm-cta svg{width:14px;height:14px}
 .final-undecided{max-width:620px;margin:2.8rem auto 0;text-align:center}
 .final-undecided p{color:var(--ink);font-size:1.05rem;margin-bottom:1.2rem}
 .btn-whatsapp{
@@ -887,17 +905,6 @@ footer a:hover{text-decoration:underline}
         </div>
       </div>
     </div>
-    <div class="coach-entry reverse">
-      <div class="coach-photo reveal">
-        <img src="assets/Mika.jpeg" alt="Mieke Nel, Lifestyle Coach at Fit by Emily.">
-      </div>
-      <div class="coach-text reveal">
-        <span class="eyebrow">Meet your coach</span>
-        <h2>Mieke Nel<span class="role">Lifestyle Coach</span></h2>
-        <p>Mieke specialises in helping women regain control when life has become busy, inconsistent, or overwhelming. Through personalised coaching, she helps you rebuild sustainable habits around nutrition, movement, sleep, and daily routines without the pressure of chasing perfection.</p>
-        <p>Structured in 6 is designed to put you back in control of the wellness basics, creating the consistency and confidence needed so that, if your goal is body transformation, you're in the best possible position to achieve it afterwards.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1141,63 +1148,48 @@ footer a:hover{text-decoration:underline}
           <svg class="tick to" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="20" y1="8" x2="10" y2="12"/><line x1="20" y1="16" x2="10" y2="12"/></svg>
         </span>
       </h2>
-      <p>Two simple ways to get started: a <span style="color:var(--magenta)">short reset</span>, or full <span style="color:var(--orange)">1:1 coaching</span>. Pick the one that fits your life right now.</p>
+      <p>Pick the <span style="color:var(--magenta)">way of working</span> that fits <span style="color:var(--orange)">where you are right now</span>, then book your call below.</p>
     </div>
-    <div class="final-cards">
-      <div class="final-card six reveal">
-        <div class="card-head">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 1 3 6.7"/><polyline points="3 21 3 15 9 15"/></svg>
-          </div>
-          <div>
-            <span class="card-kicker">Short-term reset · 6 weeks</span>
-            <div class="t">Structured in 6</div>
-          </div>
-        </div>
-        <div class="card-underline"></div>
-        <ul class="offer-list">
-          <li>6 weeks to get your routine, nutrition and training back on track.</li>
-          <li>Structure, accountability and a clear plan to rebuild consistency.</li>
-          <li>For women who've fallen out of routine and want to get moving again.</li>
-          <li>Work directly with me to build momentum, without overhauling your whole life.</li>
-        </ul>
-        <hr class="card-div">
-        <div class="price-row"><span class="price">&euro;299</span></div>
-        <div class="spacer"></div>
-        <a class="btn btn-magenta" href="https://buy.stripe.com/8x27sL7PCdlg1nt3NPffz2k" target="_blank" rel="noopener noreferrer">Buy now
+    <div class="final-mini-grid">
+      <div class="final-mini online reveal">
+        <span class="fm-tag">The core offer · 1:1 online</span>
+        <h4>1:1 Online Coaching</h4>
+        <p>Full, personalised physique transformation coaching, built entirely around you.</p>
+        <a class="fm-cta" href="#book">Book a call
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
         </a>
-        <div class="foot">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg>
-          Access starts the 10th of August.
-        </div>
       </div>
-      <div class="final-card twelve reveal">
-        <div class="card-head">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <div>
-            <span class="card-kicker">The core offer · 1:1 online</span>
-            <div class="t">1:1 Online Coaching</div>
-          </div>
-        </div>
-        <div class="card-underline"></div>
-        <ul class="offer-list">
-          <li>Fully personalised training and nutrition, built around you.</li>
-          <li>Weekly 1:1 check-ins with direct support in between.</li>
-          <li>A results-driven plan for a real, lasting transformation.</li>
-          <li>Ongoing coaching that adapts as your body and life change.</li>
-        </ul>
-        <hr class="card-div">
-        <div class="spacer"></div>
-        <a class="btn btn-orange" href="#book">Book a call
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.4 2.1L8 10.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg>
+      <div class="final-mini six reveal">
+        <span class="fm-tag">Short-term reset · 6 weeks</span>
+        <h4>Structured in 6</h4>
+        <p>6 weeks to get your routine, nutrition and training back under control. €299.</p>
+        <a class="fm-cta" href="https://buy.stripe.com/8x27sL7PCdlg1nt3NPffz2k" target="_blank" rel="noopener noreferrer">Buy now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
         </a>
-        <div class="foot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.4 2.1L8 10.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg>
-          A short call to map the right plan for you.
-        </div>
+      </div>
+      <div class="final-mini twelve reveal">
+        <span class="fm-tag">The transformation · 12 weeks</span>
+        <h4>Transformed in 12</h4>
+        <p>A focused 12-week physique transformation for women ready to fully commit.</p>
+        <a class="fm-cta" href="#book">Book a call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+        </a>
+      </div>
+      <div class="final-mini six reveal">
+        <span class="fm-tag">In-person · Train with me</span>
+        <h4>1:1 In-Person</h4>
+        <p>Face-to-face training, coached in person by me.</p>
+        <a class="fm-cta" href="#book">Book a call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+        </a>
+      </div>
+      <div class="final-mini hybrid reveal">
+        <span class="fm-tag">Hybrid · Online + in-person</span>
+        <h4>Hybrid Coaching</h4>
+        <p>Online coaching plus in-person personal training.</p>
+        <a class="fm-cta" href="#book">Book a call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+        </a>
       </div>
     </div>
     <div class="final-calendar reveal" id="book">
